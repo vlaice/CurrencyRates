@@ -1,0 +1,64 @@
+﻿@model CurrencyConverter
+<style>
+    .table {
+        vertical-align:top;
+	    width: 100%;
+	    border: none;
+	    margin-bottom: 20px;
+        font-family:'Franklin Gothic';
+        font-size: 25px;
+        text-align: center;
+        color: grey;        
+    }
+    .table thead th {        
+        vertical-align: top;	    
+	    text-align: center;
+	    border: none;
+	    padding: 10px 15px;    
+        font-family:'Franklin Gothic';
+	    font-size: 20px;                
+    }
+    .table thead tr th:first-child {
+	    border-radius: 0px 0 0 0px;
+    }
+    .table thead tr th:last-child {
+	    border-radius: 0 0px 0px 0;
+    }
+    .table tbody td {
+        vertical-align: top;
+	    text-align: center;
+	    border: none;
+	    padding: 10px 15px;
+        font-family:'Franklin Gothic';
+	    font-size: 20px;
+        border-bottom-style: solid;
+        border-bottom-color: gainsboro;  
+    }
+    .table tbody tr:nth-child(even){
+	    background: #f3f3f3;
+    }
+    .table tbody tr td:first-child {
+	    border-radius: 0px 0 0 0px;
+    }
+    .table tbody tr td:last-child {
+	    border-radius: 0 0px 0px 0;
+    }    
+</style>
+
+<center>
+    <table class="table" width="1000"> 
+        <tr><th colspan="4" ><font color="dimgray">Курс валют ЦБ</font><th></tr>
+        <tr><th><font color="dimgray">Код</font></th><th><font color="dimgray">Номинал</font></th><th><font color="dimgray">Валюта</font></th><th><font color="dimgray">Курс ЦБ</font></th></tr>
+        <tr><td>USD</td><td>1</td><td><font color="black">Доллар США</font></td><td>@($"{Model.USD}")</td></tr>
+        <tr><td>EUR</td><td>1</td><td><font color="black">Евро</font></td><td>@($"{Model.EUR}")</td></tr>
+        <tr><td>UAH</td><td>10</td><td><font color="black">Украинских гривен</font></td><td>@($"{Model.UAH10}")</td></tr>
+        <tr><td>AUD</td><td>1</td><td><font color="black">Австралийский доллар</font></td><td>@($"{Model.AUD}")</td></tr>
+        <tr><td>AZN</td><td>1</td><td><font color="black">Азербайджанский манат</font></td><td>@($"{Model.AZN}")</td></tr>
+        <tr><td>GBP</td><td>1</td><td><font color="black">Фунт стерлингов</font></td><td>@($"{Model.GBP}")</td></tr>
+        <tr><td>AMD</td><td>100</td><td><font color="black">Армянских драмов</font></td><td>@($"{Model.AMD100}")</td></tr>
+        <tr><td>BYN</td><td>1</td><td><font color="black">Белорусский рубль</font></td><td>@($"{Model.BYN}")</td></tr>
+
+    </table>
+</center>
+
+

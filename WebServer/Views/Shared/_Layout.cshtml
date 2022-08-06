@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebServer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+<head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <style>
+        header {
+            height: 70px;         
+            background-color: #0c1013;
+            -webkit-box-shadow: 0 0 19px 2px rgb(0 0 0 / 91%);
+            box-shadow: 0 0 19px 2px rgb(0 0 0 / 91%);
+            position: relative;
+            z-index: 100;
+            display: block;
+            text-decoration: none;
+        }
+        .top-menu {            
+            color: #fff;
+            text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
+            text-decoration: none;
+            font-size: 40px;
+            font-weight: 700;
+            margin-top: 10px;
+            font-family:'Franklin Gothic';          
+        }
+        a {
+            color: white; 
+            text-decoration: none;     
+        }
+        a:visited {
+            color: white; 
+        } 
+        a:hover {
+            color: grey;  
+            text-decoration: none;
+        }
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        .logo {
+            margin-left: 10px;
+            margin-bottom: 10px;  
+        } 
+        
+        body {
+            font-family: "Roboto", "Arial", sans-serif;
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center center;
+            background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-03/1614603176_33-p-fon-dlya-prezentatsii-s-belim-fonom-38.jpg");
+           
+        }
+
+        div.pagination_section {
+            font-family:'Franklin Gothic';
+            text-align: center;
+            vertical-align:top;
+        }
+       
+        .pagination_section {
+            
+        }
+
+        .pagination_section a {
+            color: black;
+            padding: 10px 18px;
+            text-decoration: none;
+        }    
+        
+        .pagination_section a:hover:not(.active) {
+            background-color: slategrey;
+            color: white;                    
+        }            
+
+        .content {
+            margin: 50px;
+            padding: 15px;
+            width: 700px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+   
+    <header>
+        <div class="header">
+            <a>
+                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/8169/8169599.png" height="50" width="50"/>
+                <a class="top-menu" href="/Home/CourseOne">Currency Rates</a>
+            </a>   
+        </div>    
+    </header>
+        
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+        
+        <center>
+            <div class="pagination_section">             
+                <a href="/Home/CourseOne">1</a>
+                <a href="/Home/CourseTwo">2</a>
+                <a href="/Home/CourseThree">3</a>
+                <a href="/Home/CourseFour">4</a>
+                <a href="/Home/CourseFive">5</a>               
+            </div>
+        </center>
+        <footer class="border-top footer text-muted">
+            <div class="body">
+                &copy; 2022 - WebServer - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿@model CurrencyConverter
+<style>
+    .table {
+        vertical-align:top;
+	    width: 100%;
+	    border: none;
+	    margin-bottom: 20px;
+        font-family:'Franklin Gothic';
+        font-size: 25px;
+        text-align: center;
+        color: grey;      
+    }
+    .table thead th {        
+        vertical-align: top;	    
+	    text-align: center;
+	    border: none;
+	    padding: 10px 15px;	    
+        font-family:'Franklin Gothic';
+	    font-size: 20px;                      
+    }
+    .table thead tr th:first-child {
+	    border-radius: 0px 0 0 0px;
+    }
+    .table thead tr th:last-child {
+	    border-radius: 0 0px 0px 0;
+    }
+    .table tbody td {
+        vertical-align: top;
+	    text-align: center;
+	    border: none;
+	    padding: 10px 15px;
+        font-family:'Franklin Gothic';
+	    font-size: 20px;
+        border-bottom-style: solid;
+        border-bottom-color: gainsboro;     
+    }
+    .table tbody tr:nth-child(even){
+	    background: #f3f3f3;
+    }
+    .table tbody tr td:first-child {
+	    border-radius: 0px 0 0 0px;
+    }
+    .table tbody tr td:last-child {
+	    border-radius: 0 0px 0px 0;
+    }
+</style>
+
+<center>
+    <table class="table" width="1000">
+        <tr><th colspan="4" ><font color="dimgray">Курс валют ЦБ</font><th></tr>
+        <tr><th><font color="dimgray">Код</font></th><th><font color="dimgray">Номинал</font></th><th><font color="dimgray">Валюта</font></th><th><font color="dimgray">Курс ЦБ</font></th></tr>
+        <tr><td>BGN</td><td>1</td><td><font color="black">Болгарский лев</font></td><td>@($"{Model.BGN}")</td></tr>
+        <tr><td>BRL</td><td>1</td><td><font color="black">Бразильский реал</font></td><td>@($"{Model.BRL}")</td></tr>
+        <tr><td>HUF</td><td>100</td><td><font color="black">Венгерских форинтов</font></td><td>@($"{Model.HUF100}")</td></tr>
+        <tr><td>HKD</td><td>10</td><td><font color="black">Гонконгских долларов</font></td><td>@($"{Model.HKD10}")</td></tr>
+        <tr><td>DKK</td><td>10</td><td><font color="black">Датских крон</font></td><td>@($"{Model.DKK10}")</td></tr>
+        <tr><td>INR</td><td>100</td><td><font color="black">Индийских рупий</font></td><td>@($"{Model.INR100}")</td></tr>
+        <tr><td>KZT</td><td>100</td><td><font color="black">Казахстанских тенге</font></td><td>@($"{Model.KZT100}")</td></tr>
+        <tr><td>CAD</td><td>1</td><td><font color="black">Канадский доллар</font></td><td>@($"{Model.CAD}")</td></tr>
+    </table>
+</center>
